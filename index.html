@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası — Evde Egzersiz</title>
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-dark: #047857;
+      --bg: #F9FAFB;
+      --card-bg: #FFFFFF;
+      --text: #1F2937;
+      --text-muted: #4B5563;
+      --border: #E5E7EB;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 32px 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #ECFDF5;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 1.75rem;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      border-left: 4px solid var(--primary);
+      padding-left: 8px;
+    }
+    p {
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .highlight-card {
+      background-color: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 20px 0;
+    }
+    .highlight-card p {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: #065F46;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Resmi Gizlilik Belgesi</span>
+      <h1>Evde Egzersiz — Gizlilik Politikası</h1>
+      <div class="meta">
+        <strong>Yayıncı / Geliştirici:</strong> BLS Digital &bull; 
+        <strong>Son Güncelleme:</strong> 30 Eylül 2026 &bull; 
+        <strong>İletişim:</strong> bhdrergvn@gmail.com
+      </div>
+    </header>
+
+    <div class="highlight-card">
+      <p>Özet Taahhüt: Evde Egzersiz hiçbir kişisel verinizi toplamaz, harici sunuculara aktarmaz ve üçüncü taraflarla paylaşmaz. Uygulama tamamen cihazınızda yerel ve çevrimdışı çalışır.</p>
+    </div>
+
+    <h2>1. Giriş ve Temel İlkemiz</h2>
+    <p>BLS Digital olarak kullanıcılarımızın gizliliğine ve veri egemenliğine koşulsuz saygı duyuyoruz. Bu Gizlilik Politikası, Evde Egzersiz mobil uygulamasının veri işlememe prensiplerini ve cihazınızdaki yerel çalışma mantığını açıklamaktadır.</p>
+
+    <h2>2. Hesap ve Kimlik Bilgileri</h2>
+    <p>Uygulamayı kullanmak için herhangi bir üyelik, hesap açma ya da e-posta, isim, telefon numarası gibi kişisel kimlik bilgisi girme zorunluluğu yoktur. Uygulama tamamen anonim bir şekilde kullanılabilir.</p>
+
+    <h2>3. Toplanan ve Saklanan Veriler (Yerel Cihaz Depolaması)</h2>
+    <p>Antrenman deneyiminizi sürdürmeniz için gerekli veriler yalnızca kendi cihazınızın yerel depolama alanında (<code>SharedPreferences</code>) saklanır:</p>
+    <ul>
+      <li><strong>Profil Tercihleri:</strong> Egzersiz seviyesi (Seviye 0 / Seviye 1), fitness hedefi ve günlük hedef süre tercihi.</li>
+      <li><strong>Antrenman Geçmişi:</strong> Tamamlanan antrenmanların tarihi, antrenman kimliği ve tamamlanma süresi.</li>
+      <li><strong>Hatırlatıcı Tercihleri:</strong> Günlük antrenman hatırlatıcısının aktif olup olmadığı ve seçilen saat/dakika.</li>
+    </ul>
+    <p>Bu veriler hiçbir koşulda harici bir sunucuya veya üçüncü kişilere gönderilmez; tamamen cihazınızın kontrolündedir.</p>
+
+    <h2>4. İnternet ve Ağ Davranışı</h2>
+    <p>Evde Egzersiz tamamen çevrimdışı (offline) çalışacak biçimde inşa edilmiştir. Uygulama Android manifest dosyasında internet erişim izni (<code>android.permission.INTERNET</code>) barındırmaz ve ağ üzerinden hiçbir iletişim gerçekleştirmez.</p>
+
+    <h2>5. Bildirimler ve İzinler</h2>
+    <p>Uygulama yalnızca kullanıcının açık onayı ile yerel egzersiz hatırlatıcısı göndermek amacıyla <code>POST_NOTIFICATIONS</code> iznini talep eder. Bildirimler cihazın yerel alarm yöneticisi tarafından üretilir; uzaktan bildirim sunucusu (push notification) bulunmamaktadır. Bu izni istediğiniz an Profil ekranından veya cihaz ayarlarınızdan kapatabilirsiniz.</p>
+
+    <h2>6. Analitik, Reklam ve Üçüncü Taraflar</h2>
+    <p>Evde Egzersiz içinde reklam gösterimi yapılmaz, kullanıcı takip mekanizması (tracking) bulunmaz ve analitik kütüphanesi (Google Analytics, Firebase vb.) yer almaz. Hiçbir veri üçüncü taraflara satılmaz veya paylaşılmaz.</p>
+
+    <h2>7. Verilerin Silinmesi ve Sıfırlanması</h2>
+    <p>Kullanıcı verileri üzerinde tam kontrole sahipsiniz. Cihazınızın <em>Ayarlar &gt; Uygulamalar &gt; Evde Egzersiz &gt; Depolama</em> bölümünden &quot;Verileri Temizle&quot; seçeneğini kullanarak veya uygulamayı cihazınızdan kaldırarak tüm yerel verilerinizi dilediğiniz anda kalıcı olarak silebilirsiniz.</p>
+
+    <h2>8. Çocukların Gizliliği</h2>
+    <p>Evde Egzersiz genel bir kullanıcı kitlesine hitap eder ve 13 yaş altı çocuklara yönelik özel bir veri toplama mekanizması içermez. Uygulama kişisel veri toplamadığından çocuklara ait veri saklama riski de barındırmaz.</p>
+
+    <h2>9. Sağlık ve Tıbbi Sorumluluk Reddi</h2>
+    <p>Evde Egzersiz, genel fiziksel zindelik ve ev egzersizleri için rehberlik sağlar; tıbbi bir teşhis, tedavi veya klinik öneri niteliği taşımaz. Herhangi bir sağlık sorununuz veya kronik rahatsızlığınız varsa egzersizlere başlamadan önce lütfen bir hekime danışınız.</p>
+
+    <h2>10. İletişim</h2>
+    <p>Gizlilik politikamız ile ilgili her türlü soru ve geri bildiriminiz için bizimle iletişime geçebilirsiniz:</p>
+    <p><strong>E-posta:</strong> <a href="mailto:bhdrergvn@gmail.com">bhdrergvn@gmail.com</a><br><strong>Yayıncı:</strong> BLS Digital</p>
+
+    <footer>
+      &copy; 2026 BLS Digital &bull; Evde Egzersiz &bull; Tüm hakları saklıdır.
+    </footer>
+  </div>
+</body>
+</html>
