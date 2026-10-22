@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gizlilik Politikası — Evde Egzersiz</title>
+  <title>Gizlilik Politikası — Movorit</title>
   <style>
     :root {
       --primary: #059669;
@@ -27,7 +27,7 @@
       padding: 24px 16px;
     }
     .container {
-      max-width: 800px;
+      max-width: 820px;
       margin: 0 auto;
       background: var(--card-bg);
       border-radius: 12px;
@@ -67,6 +67,12 @@
       border-left: 4px solid var(--primary);
       padding-left: 8px;
     }
+    h3 {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
     p {
       margin-bottom: 14px;
       color: var(--text);
@@ -90,6 +96,13 @@
       font-weight: 500;
       color: #065F46;
     }
+    code {
+      background-color: #F3F4F6;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      color: #111827;
+    }
     footer {
       margin-top: 40px;
       padding-top: 20px;
@@ -104,57 +117,81 @@
   <div class="container">
     <header>
       <span class="badge">Resmi Gizlilik Belgesi</span>
-      <h1>Evde Egzersiz — Gizlilik Politikası</h1>
+      <h1>Movorit — Gizlilik Politikası</h1>
       <div class="meta">
-        <strong>Yayıncı / Geliştirici:</strong> BLS Digital &bull; 
-        <strong>Son Güncelleme:</strong> 30 Eylül 2026 &bull; 
+        <strong>Uygulama:</strong> Movorit (Türkiye: <em>Movorit: Evde Egzersiz</em> &bull; Uluslararası: <em>Movorit: Home Workouts</em>)<br>
+        <strong>Paket Kimliği:</strong> <code>com.bhdrergvn.evdeegzersiz</code> &bull;
+        <strong>Geliştirici / Yayıncı:</strong> BLS Digital &bull;
+        <strong>Son Güncelleme:</strong> 22 Ekim 2026<br>
         <strong>İletişim:</strong> bhdrergvn@gmail.com
       </div>
     </header>
 
     <div class="highlight-card">
-      <p>Özet Taahhüt: Evde Egzersiz hiçbir kişisel verinizi toplamaz, harici sunuculara aktarmaz ve üçüncü taraflarla paylaşmaz. Uygulama tamamen cihazınızda yerel ve çevrimdışı çalışır.</p>
+      <p>Özet Veri Yaklaşımı: Movorit'in temel egzersiz özellikleri (antrenman akışları, sayaçlar, 2D animasyonlar) internet bağlantısı olmadan çevrimdışı çalışabilir. Antrenman ve profil verileriniz hiçbir harici sunucuya aktarılmaz; yalnızca cihazınızda yerel olarak saklanır. Ücretsiz sürümde reklam sunumu (Google AdMob), rıza yönetimi (Google UMP) ve mağaza lisans doğrulaması (Google Play Faturalandırma) amacıyla teknik ağ verileri işlenmektedir. Premium sürümde tüm reklamlar tamamen devre dışıdır.</p>
     </div>
 
-    <h2>1. Giriş ve Temel İlkemiz</h2>
-    <p>BLS Digital olarak kullanıcılarımızın gizliliğine ve veri egemenliğine koşulsuz saygı duyuyoruz. Bu Gizlilik Politikası, Evde Egzersiz mobil uygulamasının veri işlememe prensiplerini ve cihazınızdaki yerel çalışma mantığını açıklamaktadır.</p>
+    <h2>1. Giriş ve Genel Bakış</h2>
+    <p>BLS Digital olarak kullanıcılarımızın gizliliğine ve veri egemenliğine en üst düzeyde saygı duyuyoruz. Bu Gizlilik Politikası, Movorit mobil uygulamasının veri yaklaşımını, yerel depolama mekanizmasını ve üçüncü taraf Google servisleri üzerinden işlenen teknik verileri şeffaf bir şekilde açıklamak amacıyla hazırlanmıştır.</p>
 
     <h2>2. Hesap ve Kimlik Bilgileri</h2>
-    <p>Uygulamayı kullanmak için herhangi bir üyelik, hesap açma ya da e-posta, isim, telefon numarası gibi kişisel kimlik bilgisi girme zorunluluğu yoktur. Uygulama tamamen anonim bir şekilde kullanılabilir.</p>
+    <p>Uygulamayı kullanmak için herhangi bir üyelik, hesap açma ya da e-posta, isim, telefon numarası gibi kişisel kimlik bilgisi girme zorunluluğu yoktur. Uygulama herhangi bir profil oluşturma şartı aranmaksızın doğrudan kullanılabilir.</p>
 
-    <h2>3. Toplanan ve Saklanan Veriler (Yerel Cihaz Depolaması)</h2>
-    <p>Antrenman deneyiminizi sürdürmeniz için gerekli veriler yalnızca kendi cihazınızın yerel depolama alanında (<code>SharedPreferences</code>) saklanır:</p>
+    <h2>3. Cihaz Üzerinde Yerel Olarak Saklanan Veriler</h2>
+    <p>Antrenman deneyiminizin sürdürülmesi için gerekli veriler <strong>yalnızca kendi cihazınızın yerel depolama alanında (<code>SharedPreferences</code>)</strong> saklanır:</p>
     <ul>
-      <li><strong>Profil Tercihleri:</strong> Egzersiz seviyesi (Seviye 0 / Seviye 1), fitness hedefi ve günlük hedef süre tercihi.</li>
-      <li><strong>Antrenman Geçmişi:</strong> Tamamlanan antrenmanların tarihi, antrenman kimliği ve tamamlanma süresi.</li>
+      <li><strong>Profil Tercihleri:</strong> Egzersiz seviyesi (Seviye 0–4), fitness hedefi (Kilo Verme, Güç & Sıkılaşma, Kardiyo & Dayanıklılık, Mobilite & Toparlanma) ve günlük süre tercihi.</li>
+      <li><strong>Antrenman Geçmişi:</strong> Tamamlanan antrenmanların tarihi, antrenman kimliği ve toplam tamamlanma süresi.</li>
       <li><strong>Hatırlatıcı Tercihleri:</strong> Günlük antrenman hatırlatıcısının aktif olup olmadığı ve seçilen saat/dakika.</li>
+      <li><strong>Reklam Sıklık Sınırı:</strong> Günlük maksimum 1 tam ekran reklam sınırının korunması için son gösterim zamanı yerel olarak tutulur.</li>
+      <li><strong>Özel Haftalık Plan:</strong> Kullanıcının isteğe bağlı olarak özelleştirdiği haftalık antrenman günleri.</li>
+      <li><strong>Lisans Önbelleği:</strong> Google Play üzerinden edinilen Premium lisans durumunun yerel teyit kaydı.</li>
     </ul>
-    <p>Bu veriler hiçbir koşulda harici bir sunucuya veya üçüncü kişilere gönderilmez; tamamen cihazınızın kontrolündedir.</p>
+    <p>Bu veriler BLS Digital'e ait harici bir sunucuya veya üçüncü kişilere gönderilmez; tamamen cihazınızın kontrolündedir.</p>
 
-    <h2>4. İnternet ve Ağ Davranışı</h2>
-    <p>Evde Egzersiz tamamen çevrimdışı (offline) çalışacak biçimde inşa edilmiştir. Uygulama Android manifest dosyasında internet erişim izni (<code>android.permission.INTERNET</code>) barındırmaz ve ağ üzerinden hiçbir iletişim gerçekleştirmez.</p>
+    <h2>4. İnternet Erişimi ve Çevrimdışı Kullanım Sınırları</h2>
+    <p><strong>Çevrimdışı Çalışabilen Çekirdek Özellikler:</strong> Egzersiz programları, sayaçlar, kinetik animasyonlar ve antrenman tamamlama akışları internet bağlantısı gerektirmeksizin çevrimdışı olarak çalıştırılabilir.</p>
+    <p><strong>İnternet Erişimi (<code>android.permission.INTERNET</code>):</strong> Uygulama, Google Play Faturalandırma lisans doğrulaması ve ücretsiz sürümde Google Mobile Ads (AdMob) reklam altyapısının çalışabilmesi için internet erişimini kullanır.</p>
 
     <h2>5. Bildirimler ve İzinler</h2>
-    <p>Uygulama yalnızca kullanıcının açık onayı ile yerel egzersiz hatırlatıcısı göndermek amacıyla <code>POST_NOTIFICATIONS</code> iznini talep eder. Bildirimler cihazın yerel alarm yöneticisi tarafından üretilir; uzaktan bildirim sunucusu (push notification) bulunmamaktadır. Bu izni istediğiniz an Profil ekranından veya cihaz ayarlarınızdan kapatabilirsiniz.</p>
+    <p>Uygulama yalnızca kullanıcının açık tercihi doğrultusunda yerel egzersiz hatırlatıcısı göndermek amacıyla <code>POST_NOTIFICATIONS</code> iznini talep eder. Bildirimler cihazın yerel alarm zamanlayıcısı tarafından tetiklenir; harici bir anlık bildirim (push) sunucusu bulunmamaktadır. Bu izni istediğiniz an Profil ekranından veya cihaz ayarlarından kapatabilirsiniz.</p>
 
-    <h2>6. Analitik, Reklam ve Üçüncü Taraflar</h2>
-    <p>Evde Egzersiz içinde reklam gösterimi yapılmaz, kullanıcı takip mekanizması (tracking) bulunmaz ve analitik kütüphanesi (Google Analytics, Firebase vb.) yer almaz. Hiçbir veri üçüncü taraflara satılmaz veya paylaşılmaz.</p>
+    <h2>6. Üçüncü Taraf SDK Entegrasyonları ve Veri İşleme</h2>
+    <p>Uygulamada kullanılan üçüncü taraf Google kütüphaneleri, teknik gereklilikler ve Google gizlilik ilkeleri doğrultusunda veri işleyebilir:</p>
 
-    <h2>7. Verilerin Silinmesi ve Sıfırlanması</h2>
-    <p>Kullanıcı verileri üzerinde tam kontrole sahipsiniz. Cihazınızın <em>Ayarlar &gt; Uygulamalar &gt; Evde Egzersiz &gt; Depolama</em> bölümünden &quot;Verileri Temizle&quot; seçeneğini kullanarak veya uygulamayı cihazınızdan kaldırarak tüm yerel verilerinizi dilediğiniz anda kalıcı olarak silebilirsiniz.</p>
+    <h3>A. Google Mobile Ads (AdMob)</h3>
+    <p>Ücretsiz sürümde, antrenman tamamlandıktan sonra ana sayfaya dönüldüğünde (günde en fazla 1 kez sıklık sınırı ile) geçiş reklamı gösterilebilir. Aktif egzersiz sırasında reklam gösterilmez. AdMob SDK; sıklık sınırı, reklam sunumu ve sahtecilik önleme amacıyla Reklam Kimliğini (AAID), IP adresinden türetilen yaklaşık konumu, reklam etkileşimlerini ve SDK çökme teşhis günlüklerini işleyebilir.</p>
 
-    <h2>8. Çocukların Gizliliği</h2>
-    <p>Evde Egzersiz genel bir kullanıcı kitlesine hitap eder ve 13 yaş altı çocuklara yönelik özel bir veri toplama mekanizması içermez. Uygulama kişisel veri toplamadığından çocuklara ait veri saklama riski de barındırmaz.</p>
+    <h3>B. Google Kullanıcı Mesajlaşma Platformu (UMP)</h3>
+    <p>EEA ve Birleşik Krallık bölgelerindeki kullanıcılar için yürürlükteki mevzuat uyarınca rıza durumunu toplar ve yönetir. Kullanıcılar tercihlerini Profil ekranından diledikleri an güncelleyebilirler.</p>
 
-    <h2>9. Sağlık ve Tıbbi Sorumluluk Reddi</h2>
-    <p>Evde Egzersiz, genel fiziksel zindelik ve ev egzersizleri için rehberlik sağlar; tıbbi bir teşhis, tedavi veya klinik öneri niteliği taşımaz. Herhangi bir sağlık sorununuz veya kronik rahatsızlığınız varsa egzersizlere başlamadan önce lütfen bir hekime danışınız.</p>
+    <h3>C. Google Play Faturalandırma (In-App Billing)</h3>
+    <p>Movorit Premium aylık abonelik (<code>premium_subscription</code>) ve ömür boyu lisans (<code>premium_lifetime</code>) alımları Google Play aracılığıyla yönetilir. Satın alma belirteçleri lisans teyidi için Google Play servislerince işlenir. Finansal ödeme veya kart bilgileri geliştiriciye veya uygulamaya asla aktarılmaz.</p>
 
-    <h2>10. İletişim</h2>
-    <p>Gizlilik politikamız ile ilgili her türlü soru ve geri bildiriminiz için bizimle iletişime geçebilirsiniz:</p>
+    <h3>D. Movorit Premium (Reklamsız Deneyim)</h3>
+    <p>Premium lisans sahibi kullanıcılar için AdMob reklam çağrıları tamamen durdurulur ve uygulama %100 reklamsız çalışır.</p>
+
+    <h3>E. Analitik SDK Yoktur</h3>
+    <p>Uygulamada kullanıcı hareketlerini izleyen üçüncü taraf harici analitik araçları (Google Analytics, Firebase vb.) bulunmamaktadır.</p>
+
+    <h2>7. Android Sistem Yedeklemesi (Google Drive)</h2>
+    <p>Android işletim sisteminin varsayılan <code>allowBackup="true"</code> davranışı gereği, cihazınızda Google Drive yedeklemesi aktif ise, yerel tercihleriniz işletim sistemi düzeyinde kişisel Google Drive bulut yedekleme alanınıza dahil edilebilir.</p>
+
+    <h2>8. Verilerin Saklanması, Silinmesi ve Sıfırlanması</h2>
+    <p>Kullanıcı verileri üzerinde tam kontrole sahipsiniz. Cihazınızın <em>Ayarlar &gt; Uygulamalar &gt; Movorit &gt; Depolama</em> bölümünden &quot;Depolama Alanını Temizle&quot; seçeneğini kullanarak veya uygulamayı kaldırarak yerel verilerinizi anında silebilirsiniz. Google AdMob ve Google Play tarafından işlenen teknik verilerin saklama süreleri Google'ın kendi gizlilik politikalarına tabidir.</p>
+
+    <h2>9. Çocukların Gizliliği</h2>
+    <p>Movorit genel bir kullanıcı kitlesine (13 yaş ve üzeri) hitap eder. 13 yaş altındaki çocuklara yönelik değildir ve bu yaş grubundan bilerek veri toplamaz.</p>
+
+    <h2>10. Sağlık ve Tıbbi Sorumluluk Reddi</h2>
+    <p>Movorit, genel fiziksel zindelik rehberliği sağlar; tıbbi bir teşhis, tedavi veya klinik tavsiye niteliği taşımaz. Herhangi bir sağlık sorununuz veya kronik rahatsızlığınız varsa egzersizlere başlamadan önce lütfen bir hekime danışınız.</p>
+
+    <h2>11. İletişim</h2>
+    <p>Gizlilik politikamız ile ilgili her türlü soru ve bildiriminiz için bizimle iletişime geçebilirsiniz:</p>
     <p><strong>E-posta:</strong> <a href="mailto:bhdrergvn@gmail.com">bhdrergvn@gmail.com</a><br><strong>Yayıncı:</strong> BLS Digital</p>
 
     <footer>
-      &copy; 2026 BLS Digital &bull; Evde Egzersiz &bull; Tüm hakları saklıdır.
+      &copy; 2026 BLS Digital &bull; Movorit: Evde Egzersiz &bull; Tüm Hakları Saklıdır.
     </footer>
   </div>
 </body>
